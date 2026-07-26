@@ -1,0 +1,114 @@
+<!doctype html>
+<!--
+  PROJECT PAGE TEMPLATE — copy to projects/<name>.html and fill the {{TOKENS}}.
+  Single source of truth for ONE project. Opens over file://. No build, no JS.
+  Reading order = resume order: Identity · Now · Todos · Links · Run · Key files · Recent activity.
+  Keep it flat + anchored: /close-up and /todo do exact-string edits at the HTML comment anchors.
+  The <!-- prime:stop --> marker must stay within ~line 150 so /project's priming read sees it.
+  Works for any kind of project — a strategy, a hiring plan, a codebase. Delete sections that
+  don't apply (Run + repo/branch meta are for code work; drop them otherwise).
+  Rules: never fabricate; tag content by world; /todo is the ONLY writer of the Todos section.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{NAME}} · project</title>
+<link rel="stylesheet" href="_style.css">
+</head>
+<body>
+<main class="wrap">
+
+<header class="head">
+  <h1>{{NAME}}</h1>
+  <p class="tag">{{ONE_LINER}}</p>
+  <div class="meta">
+    <!-- Keep only the rows that apply; delete the rest. -->
+    <span><b>#{{ID}}</b></span>
+    <span><b>aliases</b> {{ALIASES}}</span>
+    <span><b>world</b> {{WORLD}}</span>
+    <span><b>status</b> {{STATUS}}</span>
+    <span><b>owner</b> {{OWNER}}</span>
+    <!-- For code work, add: -->
+    <!-- <span><b>repo</b> <span class="mono">{{REPO}}</span></span> -->
+    <!-- <span><b>branch</b> <span class="mono">{{BRANCH}}</span></span> -->
+  </div>
+  <!-- Access badge: keep only if the project has a noteworthy constraint (e.g. confidential); else delete. -->
+  <span class="badge">{{ACCESS_NOTE}}</span>
+</header>
+
+<section class="now-sec">
+  <h2 class="sec">Now</h2>
+  <!-- now:start -->
+  <div class="now">
+    <p><span class="k">State</span> {{NOW_STATE}}</p>
+    <!-- Blocker line optional — delete if none. -->
+    <p><span class="k">Blocker</span> {{NOW_BLOCKER}}</p>
+    <p><span class="k">Next</span> {{NOW_NEXT}}</p>
+  </div>
+  <!-- now:end -->
+</section>
+
+<section>
+  <h2 class="sec">Todos <span class="tcount">{{TODO_COUNT}} open</span></h2>
+  <ul class="todos">
+    <!-- todos:top -->
+    <!-- /todo writes <li> items here, newest first. Pattern:
+         <li><span class="pri p1">P1</span> <b>title</b> <span class="tmeta">· note</span></li>
+         Priority classes: p1 (high) / p2 (normal) / p3 (low). Leave empty if 0 open. -->
+    <!-- todos:end -->
+  </ul>
+  <p class="archive-link">→ <a href="../wiki/entities/todo.md">all todos</a></p>
+</section>
+
+<section>
+  <h2 class="sec">Links</h2>
+  <div class="links">
+    <!-- Open-ended. Add any: live doc, board, related program, key wiki page, source.
+         External links get the ↗ marker; in-repo links (wiki) do not. -->
+    <a href="{{LINK_URL}}">{{LINK_LABEL}} <span class="ext">↗</span></a>
+    <!-- links:end -->
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">Run</h2>
+  <!-- Optional — for projects with commands to launch. Delete this whole section otherwise. -->
+  <div class="run">
+    <div class="r">
+      <p class="lbl"><b>{{RUN_LABEL}}</b> — {{RUN_DESC}}</p>
+      <pre>{{RUN_CMD}}</pre>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">Key files</h2>
+  <ul class="keyfiles">
+    <!-- Paths or wiki pages /project should open on load. <code>path</code> + optional <span class="note">— why</span>. -->
+    <li><code>{{KEY_FILE}}</code> <span class="note">— {{KEY_FILE_NOTE}}</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2 class="sec">Recent activity</h2>
+  <!-- activity:top -->
+  <!-- /close-up prepends a new <article class="act"> here each session, newest first.
+       Keep ~5; roll the oldest (just above prime:stop) into _activity/<name>.html. -->
+  <article class="act">
+    <h3><a href="{{ACT_LINK}}">{{ACT_TITLE}}</a><span class="date">{{ACT_DATE}}</span></h3>
+    <ul>
+      <li><span class="k">Did</span> {{ACT_DID}}</li>
+      <li><span class="k">State</span> {{ACT_STATE}}</li>
+      <li><span class="k">Next</span> {{ACT_NEXT}}</li>
+    </ul>
+  </article>
+  <!-- prime:stop -->
+  <p class="archive-link">→ <a href="_activity/{{NAME}}.html">Full activity log</a></p>
+</section>
+
+<p class="foot">Single source of truth for this project. Edited by <span class="mono">/close-up</span> (Now + activity) and <span class="mono">/todo</span> (todos), read by <span class="mono">/project {{ALIAS}}</span>. No build step.</p>
+
+</main>
+</body>
+</html>

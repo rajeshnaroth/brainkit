@@ -61,6 +61,8 @@ Offer but don't force: preferred **tone/voice**.
 - [ ] At least one real project page exists and is registered in
       `projects/index.html`; the example project is gone.
 - [ ] `wiki/` skeleton intact; `log.md` init line is dated.
+- [ ] `.claude/commands/*.md` stubs are present (they ship with the seed and need no
+      changes) so skills are actually invocable, not just documented in `skills/`.
 - [ ] Backup pushed, OR explicitly left local with the user informed.
 - [ ] `SEED.md` deleted and a first commit exists.
 - [ ] You demonstrated one working action (note/query, or a project focus).

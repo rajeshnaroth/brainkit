@@ -39,9 +39,19 @@ sticky. Keeping the global view one step away is the point.
 
 ## Skills
 
-Skills are plain-Markdown SOPs in `skills/`. Invoke one by name ("close up",
-`/close-up`) or by describing the intent. When invoked, **read that SOP file and
-follow it**. Each is also a worked example — clone one to author your own.
+Skills are plain-Markdown SOPs in `skills/` — this is the canonical, agent-agnostic
+home; edit the SOP here. Invoke one by name ("close up", `/close-up`) or by
+describing the intent. When invoked, **read that SOP file and follow it**. Each is
+also a worked example — clone one to author your own.
+
+**Discovery note:** Claude Code and Copilot CLI only auto-discover invocable
+commands from `.claude/commands/*.md` — a folder named `skills/` alone is invisible
+to that mechanism, even though the concept is generic. So `.claude/commands/`
+carries one thin stub per skill (a couple of lines pointing at the real SOP in
+`skills/`); that's why both exist. If you add a new skill, add both: the real SOP in
+`skills/`, and a matching stub in `.claude/commands/` so it's actually invocable.
+Agents without that native mechanism (Cursor, etc.) can just be told to read
+`skills/` directly using the table below.
 
 | Invoke | SOP | Does |
 |---|---|---|

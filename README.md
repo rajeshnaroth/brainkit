@@ -39,7 +39,8 @@ Open `projects/index.html` in a browser and bookmark it — that's your dashboar
 | `profile.md` | Your config — the one file that personalizes everything. |
 | `wiki/` | Your knowledge base (`sources` · `entities` · `concepts` · `synthesis`) + its SOP. |
 | `projects/` | HTML project pages (bookmarkable) + the portfolio index. |
-| `skills/` | The eight SOPs the agent runs. Clone one to write your own. |
+| `skills/` | The eight SOPs the agent runs — canonical source; clone one to write your own. |
+| `.claude/commands/` | Thin stubs so Claude Code / Copilot CLI auto-discover the skills above as invocable commands. |
 
 ## The idea
 

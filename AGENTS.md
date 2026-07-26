@@ -85,6 +85,11 @@ The authoritative rules for the wiki itself live in **`wiki/AGENTS.md`**; the
   resume the work: identity → now → todos → links → key files → recent activity.
 - **Smart defaults.** When a skill needs input, propose a sensible default and let
   the user accept with one keystroke; never force a long questionnaire.
+- **Ask in chat, not a picker.** Any question a skill needs to ask goes in plain
+  chat text, even when the agent's environment offers a built-in interactive
+  multiple-choice/key-select tool. Skip that tool for this — it renders as a popup
+  that loses the surrounding context once dismissed, which fights the "feels like a
+  chat" goal above.
 
 ## Backup
 

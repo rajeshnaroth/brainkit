@@ -6,6 +6,13 @@ conversationally — warm, brief, and assume the user may be non-technical. Offe
 smart default at every step; never make them fill a long form. The whole thing
 should feel like a two-minute chat, not an install.
 
+**Ask in plain chat text, never a tool-driven multiple-choice/key-select UI.** If
+your environment offers a built-in "ask user" or interactive-picker tool, do not use
+it for this interview — type the question and the suggested default as an ordinary
+chat message and let the user reply in their own words. Popups lose context once
+dismissed and feel like a form, which is exactly what this is not supposed to be.
+This applies to every question this file asks, not just the interview below.
+
 ## 0. Orient
 - Confirm you're in the folder the user wants their brain to live in. If it already
   contains a filled `profile.md`, stop and ask — don't overwrite an existing brain.

@@ -5,18 +5,27 @@ agent builds and tends for you. Works for anyone: a CEO, an engineer, a head of
 people. Once planted it grows its own shape; there's nothing to keep in sync with
 this seed.
 
-## Set it up (one line)
+## Set it up
 
-You need two things: an agent CLI (**Claude Code** or **GitHub Copilot CLI**) and
-**git**.
+You need an agent CLI (**Claude Code** or **GitHub Copilot CLI**) and **git**.
 
-In an empty folder, launch your agent and paste:
+Clone the seed in one shot, then step in:
 
-> **Build my second brain from github.com/rajeshnaroth/brainkit**
+```sh
+git clone https://github.com/rajeshnaroth/brainkit.git my-second-brain
+cd my-second-brain
+```
 
-The agent fetches this seed, sets up your brain in place — two worlds, **work** and
-**personal** — prints a short welcome, and cleans up after itself. No interview, no
-config files to hand-edit. Back it up to a private git repo later, whenever you like.
+Now launch your agent in that folder and say:
+
+> **Set up my second brain** (follow `SEED.md`)
+
+It re-inits a clean git history, sets up your two worlds — **work** and **personal** —
+prints a short welcome, and deletes the seed instructions. No interview, no config to
+hand-edit. Back it up to a private git repo later, whenever you like.
+
+> Clone it — don't ask the agent to "fetch" the repo. A single clone pulls the whole
+> tree at once; fetching file-by-file is slow and triggers an approval per file.
 
 ## Using it day to day
 

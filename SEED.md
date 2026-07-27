@@ -6,10 +6,14 @@ interview** — the brain ships ready to use. Your job is a quick, silent bootst
 then a warm welcome. Do it in a few seconds, not a few minutes.
 
 ## 1. Orient
+- You should already be **inside a clone** of the seed — the whole tree is on disk
+  (you're reading this file locally). If instead you were only handed the seed's URL,
+  clone it in **one** operation (`git clone <url> .` into the target folder) — never
+  fetch files one at a time over HTTP; that is slow and prompts the user per file.
 - Confirm you're in the folder the user wants their brain to live in. If `wiki/work/`
   already contains real pages, stop and ask — don't overwrite an existing brain.
-- This tree was fetched from the seed. Re-init a clean history so the brain has no
-  upstream and no seed remote: `rm -rf .git && git init -q`.
+- Re-init a clean history so the brain has no upstream and no seed remote:
+  `rm -rf .git && git init -q`.
 
 ## 2. Set up (silent — no questions)
 - The structure already ships ready: two worlds (`wiki/work/`, `wiki/personal/`),

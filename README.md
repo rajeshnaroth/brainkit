@@ -24,6 +24,11 @@ It re-inits a clean git history, sets up your two worlds — **work** and **pers
 prints a short welcome, and deletes the seed instructions. No interview, no config to
 hand-edit. Back it up to a private git repo later, whenever you like.
 
+> **First run only:** your agent doesn't trust a freshly cloned folder yet, so it will
+> ask to approve setup's handful of edits. Pick **"allow all edits during this
+> session"** once (Claude Code: option 2 / shift+tab) and it finishes quietly. The
+> shipped `.claude/settings.json` keeps later sessions quiet on its own.
+
 > Clone it — don't ask the agent to "fetch" the repo. A single clone pulls the whole
 > tree at once; fetching file-by-file is slow and triggers an approval per file.
 

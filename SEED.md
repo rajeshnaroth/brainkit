@@ -19,12 +19,21 @@ then a warm welcome. Do it in a few seconds, not a few minutes.
 - The structure already ships ready: two worlds (`wiki/work/`, `wiki/personal/`),
   each with `sources/ entities/ concepts/ synthesis/`; a shared `wiki/raw/` inbox;
   the project dashboard (`projects/index.html`) with one example project; the skills;
-  and a permissive `.claude/settings.json` so the user isn't flooded with approvals.
-- Leave `profile.md` as its shipped stub. The user can personalize it later.
-- Stamp today's date into `wiki/log.md`'s init line.
+  and a permissive `.claude/settings.json` so the user isn't flooded with approvals
+  once they trust the folder.
+- Leave `profile.md` and `wiki/log.md` as their shipped stubs — no edits needed.
+- Keep setup to as few write operations as possible; the shipped tree is already
+  correct, so the only writes are the git re-init and this file's deletion.
 - **Delete this file (`SEED.md`)** — its job is done. `AGENTS.md` is the durable
   constitution that stays.
 - Commit everything: `git add -A && git commit -m "Set up second brain from brainkit"`.
+
+> **First-run heads-up (mention this to the user up front):** a freshly cloned repo
+> isn't trusted yet, so the agent's own `.claude/settings.json` isn't active for this
+> first session — the tool will ask to approve the setup edits. Tell them to pick
+> **"allow all edits during this session"** (Claude Code: option 2 / shift+tab) once,
+> and setup finishes quietly. From the next session on, the shipped settings keep it
+> quiet automatically.
 
 ## 3. Welcome — print this to the user (in plain chat)
 Show them exactly this, then stop and let them drive:
@@ -51,7 +60,6 @@ Show them exactly this, then stop and let them drive:
 - [ ] Fresh git history (no seed remote); one initial commit exists.
 - [ ] `wiki/work/` and `wiki/personal/` both present with their four sub-categories;
       `wiki/raw/` inbox present.
-- [ ] `wiki/log.md` init line is dated.
 - [ ] `.claude/commands/*.md` stubs are present (they ship with the seed) so skills
       are invocable.
 - [ ] `SEED.md` deleted.

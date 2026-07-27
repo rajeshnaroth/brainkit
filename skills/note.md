@@ -12,15 +12,16 @@ them here.
    ```yaml
    ---
    title: ...
-   world: <one of profile.md's worlds>
    created: {YYYY-MM-DD}
    source: note
    ---
    ```
-   Saving before anything else means a failed ingest never loses the note.
+   Saving before anything else means a failed ingest never loses the note. If the
+   note is personal, add a line to its body like `world: personal` so `/wiki-ingest`
+   files it under `wiki/personal/`; otherwise it defaults to work.
 4. Offer to run `/wiki-ingest` on it now, or leave it queued in `wiki/raw/`.
 
 ## Notes
-- If the note obviously belongs to a `confidential` world, tag it so and keep it out
-  of shared context.
+- If the note is clearly personal, flag it (see step 3) so it lands in the personal
+  world and stays out of any work context.
 - One thought per note; if the user dumps several, split them.

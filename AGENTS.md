@@ -20,14 +20,19 @@ Two superpowers, in tension by design:
 
 ## The model: worlds · projects · facets
 
-- **World** — a coarse top-level boundary ("a life"): e.g. `work`, `personal`,
-  `confidential`. Worlds exist for separation and privacy, and are declared in
-  `profile.md`. **Never mix a `confidential` world into others.**
-- **Project** — an active area of focus within a world. Each has a page under
-  `projects/` (an HTML file that is its single source of truth), plus links.
+- **World** — a coarse top-level boundary, and it's a **folder**, not a setting. The
+  wiki ships with two: `wiki/work/` (your default) and `wiki/personal/` (a private
+  wall). The path *is* the world — pages carry no `world:` tag. **Cross-reference
+  stays inside a world and stops at the wall:** never link a `work/` page to a
+  `personal/` one, and a work query never reads `personal/`. Add a third walled world
+  later (e.g. `confidential/`) by adding a sibling folder.
+- **Project** — an active area of focus. Projects live in `work/` only (each is a
+  page under `projects/`, an HTML file that is its single source of truth, plus
+  links). Personal is a privacy wall for knowledge, not a project space — if you want
+  personal *projects*, start a separate brain.
 - **Facet** — an orthogonal topical tag on a wiki page (`hiring`, `pricing`,
-  `kubernetes`, …). Facets are **derived** by the agent from your domain and
-  content, never enumerated by you.
+  `kubernetes`, …). Facets are **derived** by the agent from your content, never
+  enumerated by you.
 
 ## Focus is non-persistent — start at root
 
@@ -69,8 +74,9 @@ The authoritative rules for the wiki itself live in **`wiki/AGENTS.md`**; the
 
 - **Never fabricate.** If you don't know, say so. Cite wiki pages when asserting
   facts drawn from them.
-- **Tag by world.** Every wiki page carries a `world:` matching one of
-  `profile.md`'s worlds. Never let a `confidential` world leak into another.
+- **File by world folder.** Knowledge lives under `wiki/work/` or `wiki/personal/`;
+  the folder is the world (no `world:` tag). Never link or merge across the
+  work/personal wall, and never surface `personal/` content in a work answer.
 - **Anchored flat files.** Project pages carry HTML comment anchors
   (`<!-- now:start -->`, `<!-- activity:top -->`, `<!-- prime:stop -->`). Skills
   edit *between* anchors with exact-string edits — keep the anchors intact.
@@ -89,9 +95,9 @@ The authoritative rules for the wiki itself live in **`wiki/AGENTS.md`**; the
 
 ## Backup
 
-If `profile.md`'s `backup.remote` is set, offer to commit and push after meaningful
-changes. If it's empty, stay local and mention once that backup is available. Never
-push a `confidential` world to a shared remote without explicit confirmation.
+The brain stays **local by default** — backup is an opt-in add-on. When the user
+asks to back up, help them push to a private git repo; once a remote is set, offer to
+commit and push after meaningful changes. Never push without explicit confirmation.
 
 ## When you learn something durable
 

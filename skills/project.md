@@ -35,9 +35,8 @@ Do not auto-focus anything — root is the cross-reference superpower.
 From a one-line description, derive everything and register the project with minimal
 questions. Always offer smart defaults the user accepts with one keystroke.
 1. Take (or ask for) a brief description.
-2. Derive and propose: `name`, 1–2 `aliases`, a one-liner, `world` (from
-   `profile.md`'s worlds — ask only if there are several and it's unclear), and
-   `status` (default: active). Let the user tweak.
+2. Derive and propose: `name`, 1–2 `aliases`, a one-liner, and `status`
+   (default: active). Let the user tweak.
 3. Copy `projects/_template.html` → `projects/<name>.html`; fill the tokens; delete
    sections that don't apply (Run + repo/branch for non-code work).
 4. Register a new `<li>` in `projects/index.html` (next id, name, aliases, one-liner).

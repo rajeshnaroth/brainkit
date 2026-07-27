@@ -7,7 +7,7 @@
   The <!-- prime:stop --> marker must stay within ~line 150 so /project's priming read sees it.
   Works for any kind of project — a strategy, a hiring plan, a codebase. Delete sections that
   don't apply (Run + repo/branch meta are for code work; drop them otherwise).
-  Rules: never fabricate; tag content by world.
+  Rules: never fabricate.
 -->
 <html lang="en">
 <head>
@@ -26,14 +26,13 @@
     <!-- Keep only the rows that apply; delete the rest. -->
     <span><b>#{{ID}}</b></span>
     <span><b>aliases</b> {{ALIASES}}</span>
-    <span><b>world</b> {{WORLD}}</span>
     <span><b>status</b> {{STATUS}}</span>
     <span><b>owner</b> {{OWNER}}</span>
     <!-- For code work, add: -->
     <!-- <span><b>repo</b> <span class="mono">{{REPO}}</span></span> -->
     <!-- <span><b>branch</b> <span class="mono">{{BRANCH}}</span></span> -->
   </div>
-  <!-- Access badge: keep only if the project has a noteworthy constraint (e.g. confidential); else delete. -->
+  <!-- Access badge: keep only if the project has a noteworthy constraint or note; else delete. -->
   <span class="badge">{{ACCESS_NOTE}}</span>
 </header>
 

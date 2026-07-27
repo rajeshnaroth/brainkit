@@ -14,9 +14,9 @@ In an empty folder, launch your agent and paste:
 
 > **Build my second brain from github.com/rajeshnaroth/brainkit**
 
-The agent fetches this seed, interviews you for about two minutes, generates your
-brain in place, backs it up to a private git repo if you're signed in, and cleans up
-after itself. No manual installs, no config files to hand-edit.
+The agent fetches this seed, sets up your brain in place — two worlds, **work** and
+**personal** — prints a short welcome, and cleans up after itself. No interview, no
+config files to hand-edit. Back it up to a private git repo later, whenever you like.
 
 ## Using it day to day
 
@@ -35,11 +35,11 @@ Open `projects/index.html` in a browser and bookmark it — that's your dashboar
 | Path | What |
 |---|---|
 | `AGENTS.md` | The constitution every agent follows — model, skills, conventions. |
-| `profile.md` | Your config — the one file that personalizes everything. |
-| `wiki/` | Your knowledge base (`sources` · `entities` · `concepts` · `synthesis`) + its SOP. |
+| `profile.md` | Optional personalization — everything works without touching it. |
+| `wiki/` | Your knowledge base, split into two worlds: `work/` and `personal/` (each with `sources` · `entities` · `concepts` · `synthesis`), plus its SOP. |
 | `projects/` | HTML project pages (bookmarkable) + the portfolio index. |
 | `skills/` | The SOPs the agent runs — canonical source; clone one to write your own. |
-| `.claude/commands/` | Thin stubs so Claude Code / Copilot CLI auto-discover the skills above as invocable commands. |
+| `.claude/` | `commands/` — thin stubs so Claude Code / Copilot CLI auto-discover the skills; `settings.json` — sane permissions so you're not flooded with approvals. |
 
 ## The idea
 

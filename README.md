@@ -10,14 +10,16 @@ this seed.
 You need an agent CLI (**Claude Code** or **GitHub Copilot CLI**) and **git**.
 
 **The easy way — let the agent do it.** Make an empty folder for your brain, `cd` into
-it, and start your agent. Turn on **auto / bypass-permissions mode** (in Claude Code,
-press `shift+tab` until it shows *bypass permissions*), then type:
+it, and start your agent. **Turn on auto / bypass-permissions mode first** (in Claude
+Code, press `shift+tab` until it shows *bypass permissions*) — this is what makes setup
+run in one shot with **no approval prompts**. Then type:
 
 > **setup my second brain from https://github.com/rajeshnaroth/brainkit**
 
-The agent clones the seed, sets up your two worlds — **work** and **personal** —
-prints a short welcome, and cleans up after itself. Auto-mode means it won't stop to
-ask permission at each step.
+The agent clones the seed in a single step (it won't study the repo over the API
+first), sets up your two worlds — **work** and **personal** — prints a short welcome,
+and cleans up after itself. Without auto-mode it still works, but you'll approve a
+couple of commands (a clone and a deletion) along the way.
 
 **Prefer to drive git yourself?** Clone first, then start your agent in the folder:
 

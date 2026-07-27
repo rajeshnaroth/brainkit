@@ -5,11 +5,25 @@ brain** for the human in front of you, from the `brainkit` seed. There is **no
 interview** — the brain ships ready to use. Your job is a quick, silent bootstrap,
 then a warm welcome. Do it in a few seconds, not a few minutes.
 
+## 0. Agent bootstrap — do this first, in the fewest commands possible
+If you were invoked as *"setup my second brain from `<url>`"* and have no local files
+yet, your **first and only acquisition step is a single clone**:
+`git clone <url> .` into the empty target folder. Then read this `SEED.md` locally and
+follow it.
+
+- **Do NOT inspect the repo over the GitHub API** (`gh repo view`, `gh api .../contents`,
+  tree listings) or fetch files one at a time before cloning — every such call is a
+  separate approval for information that's free once you've cloned. One clone replaces
+  all of it.
+- **Trust the shipped tree.** Don't run `ls`/`find` audits to "verify" the structure;
+  the acceptance criteria below can be checked from the files you already have open.
+- Setup then costs **one more command** (the deletion in step 2). So the whole thing is
+  two commands total: clone, then `rm`. If the user is in **auto / bypass-permissions
+  mode**, both run with zero prompts.
+
 ## 1. Orient
 - You should already be **inside a clone** of the seed — the whole tree is on disk
-  (you're reading this file locally). If instead you were only handed the seed's URL,
-  clone it in **one** operation (`git clone <url> .` into the target folder) — never
-  fetch files one at a time over HTTP; that is slow and prompts the user per file.
+  (you're reading this file locally). If you only had the URL, you cloned it in step 0.
 - Confirm you're in the folder the user wants their brain to live in. If `wiki/work/`
   already contains real pages, stop and ask — don't overwrite an existing brain.
 

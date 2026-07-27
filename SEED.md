@@ -12,8 +12,6 @@ then a warm welcome. Do it in a few seconds, not a few minutes.
   fetch files one at a time over HTTP; that is slow and prompts the user per file.
 - Confirm you're in the folder the user wants their brain to live in. If `wiki/work/`
   already contains real pages, stop and ask — don't overwrite an existing brain.
-- Re-init a clean history so the brain has no upstream and no seed remote:
-  `rm -rf .git && git init -q`.
 
 ## 2. Set up (silent — no questions)
 - The structure already ships ready: two worlds (`wiki/work/`, `wiki/personal/`),
@@ -21,19 +19,20 @@ then a warm welcome. Do it in a few seconds, not a few minutes.
   the project dashboard (`projects/index.html`) with one example project; the skills;
   and a permissive `.claude/settings.json` so the user isn't flooded with approvals
   once they trust the folder.
-- Leave `profile.md` and `wiki/log.md` as their shipped stubs — no edits needed.
-- Keep setup to as few write operations as possible; the shipped tree is already
-  correct, so the only writes are the git re-init and this file's deletion.
-- **Delete this file (`SEED.md`)** — its job is done. `AGENTS.md` is the durable
-  constitution that stays.
-- Commit everything: `git add -A && git commit -m "Set up second brain from brainkit"`.
+- **Nothing needs editing** — leave `profile.md`, `wiki/log.md`, and every other file
+  as their shipped stubs.
+- The whole setup is a **single deletion**, so the user approves once, not many times:
+  `rm -rf .git SEED.md`. This detaches brainkit's git history/remote (the brain
+  becomes a plain local folder) and removes these setup instructions. Do **not**
+  create a new git repo or commit — git and backup are an opt-in add-on the user can
+  set up later (see `AGENTS.md` → Backup); don't assume it at install. `AGENTS.md` is
+  the durable constitution and stays.
 
 > **First-run heads-up (mention this to the user up front):** a freshly cloned repo
 > isn't trusted yet, so the agent's own `.claude/settings.json` isn't active for this
-> first session — the tool will ask to approve the setup edits. Tell them to pick
-> **"allow all edits during this session"** (Claude Code: option 2 / shift+tab) once,
-> and setup finishes quietly. From the next session on, the shipped settings keep it
-> quiet automatically.
+> first session — the tool will ask to approve the one setup command (the deletion
+> above). Approve it once; from the next session on, the shipped settings keep routine
+> work quiet automatically.
 
 ## 3. Welcome — print this to the user (in plain chat)
 Show them exactly this, then stop and let them drive:
@@ -57,7 +56,8 @@ Show them exactly this, then stop and let them drive:
 > rest.
 
 ## Acceptance criteria — verify before you call it done
-- [ ] Fresh git history (no seed remote); one initial commit exists.
+- [ ] Seed's `.git` removed (brain detached from brainkit); **no** new repo or commit
+      created — git/backup stay opt-in.
 - [ ] `wiki/work/` and `wiki/personal/` both present with their four sub-categories;
       `wiki/raw/` inbox present.
 - [ ] `.claude/commands/*.md` stubs are present (they ship with the seed) so skills

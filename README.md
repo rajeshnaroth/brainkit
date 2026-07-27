@@ -20,9 +20,10 @@ Now launch your agent in that folder and say:
 
 > **Set up my second brain** (follow `SEED.md`)
 
-It re-inits a clean git history, sets up your two worlds — **work** and **personal** —
-prints a short welcome, and deletes the seed instructions. No interview, no config to
-hand-edit. Back it up to a private git repo later, whenever you like.
+It detaches the seed from brainkit, sets up your two worlds — **work** and
+**personal** — prints a short welcome, and deletes the seed instructions. No
+interview, no config to hand-edit, and no git repo assumed — the brain is just a local
+folder. Back it up to a private git repo later, whenever you like.
 
 > **First run only:** your agent doesn't trust a freshly cloned folder yet, so it will
 > ask to approve setup's handful of edits. Pick **"allow all edits during this

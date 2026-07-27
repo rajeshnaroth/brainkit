@@ -36,3 +36,9 @@ with it, that file wins.
 - If a raw file is ambiguous or low-signal, ask before forcing a page.
 - Keep the `personal` world isolated — its pages live under `wiki/personal/` and are
   never merged into or linked from `work/`.
+
+---
+
+## Self-Improvement Protocol
+
+See [Shared Self-Improvement Protocol](./_shared/self-improvement-protocol.md).

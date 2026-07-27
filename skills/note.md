@@ -25,3 +25,9 @@ them here.
 - If the note is clearly personal, flag it (see step 3) so it lands in the personal
   world and stays out of any work context.
 - One thought per note; if the user dumps several, split them.
+
+---
+
+## Self-Improvement Protocol
+
+See [Shared Self-Improvement Protocol](./_shared/self-improvement-protocol.md).

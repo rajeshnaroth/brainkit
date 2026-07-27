@@ -26,3 +26,9 @@ Answer a question grounded in the wiki, with citations. Follow the Query workflo
 - `wiki/raw/` is pre-ingestion; only read it if asked, or if structured pages don't
   cover the topic.
 - The work/personal wall holds here too: a work query stays in `wiki/work/`.
+
+---
+
+## Self-Improvement Protocol
+
+See [Shared Self-Improvement Protocol](./_shared/self-improvement-protocol.md).

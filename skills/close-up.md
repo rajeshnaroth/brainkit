@@ -33,3 +33,9 @@ durable knowledge into the wiki.
 - Only touch anchored regions on the project page; leave the rest byte-stable.
 - At root (no focused project), still write the brief + ingest; skip the project-page
   update.
+
+---
+
+## Self-Improvement Protocol
+
+See [Shared Self-Improvement Protocol](./_shared/self-improvement-protocol.md).

@@ -25,3 +25,9 @@ stale ones, refresh the index. Follow the Maintain workflow in
   it.
 - Treat `wiki/AGENTS.md` itself as read-only here — changing conventions is a
   separate, deliberate conversation.
+
+---
+
+## Self-Improvement Protocol
+
+See [Shared Self-Improvement Protocol](./_shared/self-improvement-protocol.md).

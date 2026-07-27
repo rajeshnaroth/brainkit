@@ -46,3 +46,9 @@ questions. Always offer smart defaults the user accepts with one keystroke.
 - The HTML page IS the project's definition and single source of truth. Never keep a
   parallel markdown copy.
 - Keep `<!-- prime:stop -->` within ~150 lines so the priming read stays cheap.
+
+---
+
+## Self-Improvement Protocol
+
+See [Shared Self-Improvement Protocol](./_shared/self-improvement-protocol.md).

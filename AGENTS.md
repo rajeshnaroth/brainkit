@@ -53,7 +53,8 @@ commands from `.claude/commands/*.md` — a folder named `skills/` alone is invi
 to that mechanism, even though the concept is generic. So `.claude/commands/`
 carries one thin stub per skill (a couple of lines pointing at the real SOP in
 `skills/`); that's why both exist. If you add a new skill, add both: the real SOP in
-`skills/`, and a matching stub in `.claude/commands/` so it's actually invocable.
+`skills/`, and a matching stub in `.claude/commands/` so it's actually invocable. End
+every skill SOP with the shared Self-Improvement Protocol footer (see the others).
 Agents without that native mechanism (Cursor, etc.) can just be told to read
 `skills/` directly using the table below.
 
@@ -101,6 +102,8 @@ commit and push after meaningful changes. Never push without explicit confirmati
 
 ## When you learn something durable
 
-If you hit a repeatable gotcha while running a skill, add a one-line
-`<!-- learned: … -->` note at the failing step in that skill's SOP. The system
-improves itself in place.
+You maintain the skills you run: if one misfires or needs a workaround, fix its SOP
+in place before finishing — don't just work around it. Add a one-line
+`<!-- learned: … -->` note at the failing step so the system improves itself in place.
+Every skill ends with the shared **Self-Improvement Protocol**
+(`skills/_shared/self-improvement-protocol.md`) — the full rules live there.

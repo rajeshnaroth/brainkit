@@ -30,3 +30,9 @@ skill; every other skill writes content into the structures it defines.
 - Ships a good default; there is no live "pull" from upstream. Want a newer look?
   Restyle here — you won't clobber anyone, and no one clobbers you.
 - Test a change by opening a project page in a browser — it's just a file.
+
+---
+
+## Self-Improvement Protocol
+
+See [Shared Self-Improvement Protocol](./_shared/self-improvement-protocol.md).

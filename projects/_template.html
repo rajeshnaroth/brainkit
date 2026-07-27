@@ -2,12 +2,12 @@
 <!--
   PROJECT PAGE TEMPLATE — copy to projects/<name>.html and fill the {{TOKENS}}.
   Single source of truth for ONE project. Opens over file://. No build, no JS.
-  Reading order = resume order: Identity · Now · Todos · Links · Run · Key files · Recent activity.
-  Keep it flat + anchored: /close-up and /todo do exact-string edits at the HTML comment anchors.
+  Reading order = resume order: Identity · Now · Links · Run · Key files · Recent activity.
+  Keep it flat + anchored: /close-up does exact-string edits at the HTML comment anchors.
   The <!-- prime:stop --> marker must stay within ~line 150 so /project's priming read sees it.
   Works for any kind of project — a strategy, a hiring plan, a codebase. Delete sections that
   don't apply (Run + repo/branch meta are for code work; drop them otherwise).
-  Rules: never fabricate; tag content by world; /todo is the ONLY writer of the Todos section.
+  Rules: never fabricate; tag content by world.
 -->
 <html lang="en">
 <head>
@@ -47,18 +47,6 @@
     <p><span class="k">Next</span> {{NOW_NEXT}}</p>
   </div>
   <!-- now:end -->
-</section>
-
-<section>
-  <h2 class="sec">Todos <span class="tcount">{{TODO_COUNT}} open</span></h2>
-  <ul class="todos">
-    <!-- todos:top -->
-    <!-- /todo writes <li> items here, newest first. Pattern:
-         <li><span class="pri p1">P1</span> <b>title</b> <span class="tmeta">· note</span></li>
-         Priority classes: p1 (high) / p2 (normal) / p3 (low). Leave empty if 0 open. -->
-    <!-- todos:end -->
-  </ul>
-  <p class="archive-link">→ <a href="../wiki/entities/todo.md">all todos</a></p>
 </section>
 
 <section>
@@ -107,7 +95,7 @@
   <p class="archive-link">→ <a href="_activity/{{NAME}}.html">Full activity log</a></p>
 </section>
 
-<p class="foot">Single source of truth for this project. Edited by <span class="mono">/close-up</span> (Now + activity) and <span class="mono">/todo</span> (todos), read by <span class="mono">/project {{ALIAS}}</span>. No build step.</p>
+<p class="foot">Single source of truth for this project. Edited by <span class="mono">/close-up</span> (Now + activity), read by <span class="mono">/project {{ALIAS}}</span>. No build step.</p>
 
 </main>
 </body>

@@ -23,10 +23,9 @@ after itself. No manual installs, no config files to hand-edit.
 Start every session by `cd`-ing into your brain's folder and launching your agent.
 You land at **root** — the global view. From there:
 
-- `project <name>` — focus one project (its state, todos, links, and files at hand).
+- `project <name>` — focus one project (its state, links, and files at hand).
 - `note` — capture a thought into your wiki.
 - `wiki-query <question>` — ask your own knowledge base, with citations.
-- `todo add <thing>` — track work (it mirrors onto the focused project's page).
 - `close-up` — end a session: it records what happened and files your next steps.
 
 Open `projects/index.html` in a browser and bookmark it — that's your dashboard.
@@ -39,7 +38,7 @@ Open `projects/index.html` in a browser and bookmark it — that's your dashboar
 | `profile.md` | Your config — the one file that personalizes everything. |
 | `wiki/` | Your knowledge base (`sources` · `entities` · `concepts` · `synthesis`) + its SOP. |
 | `projects/` | HTML project pages (bookmarkable) + the portfolio index. |
-| `skills/` | The eight SOPs the agent runs — canonical source; clone one to write your own. |
+| `skills/` | The SOPs the agent runs — canonical source; clone one to write your own. |
 | `.claude/commands/` | Thin stubs so Claude Code / Copilot CLI auto-discover the skills above as invocable commands. |
 
 ## The idea

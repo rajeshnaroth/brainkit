@@ -24,8 +24,7 @@ Two superpowers, in tension by design:
   `confidential`. Worlds exist for separation and privacy, and are declared in
   `profile.md`. **Never mix a `confidential` world into others.**
 - **Project** — an active area of focus within a world. Each has a page under
-  `projects/` (an HTML file that is its single source of truth), plus todos and
-  links.
+  `projects/` (an HTML file that is its single source of truth), plus links.
 - **Facet** — an orthogonal topical tag on a wiki page (`hiring`, `pricing`,
   `kubernetes`, …). Facets are **derived** by the agent from your domain and
   content, never enumerated by you.
@@ -57,8 +56,7 @@ Agents without that native mechanism (Cursor, etc.) can just be told to read
 |---|---|---|
 | `project` · `project <name>` · `project add` | `skills/project.md` | Switch focus to a project (or root); register a new one |
 | `dashboard` | `skills/dashboard.md` | Customize the look of project pages + the index |
-| `close-up` | `skills/close-up.md` | End of session: write a brief, update the project page, file next steps as todos, ingest |
-| `todo` | `skills/todo.md` | The ONLY writer of todo state (source file + project-page mirror) |
+| `close-up` | `skills/close-up.md` | End of session: write a brief, update the project page, ingest |
 | `note` | `skills/note.md` | Quick-capture a thought into `wiki/raw/` for later ingestion |
 | `wiki-ingest` | `skills/wiki-ingest.md` | Turn `wiki/raw/` material into structured wiki pages |
 | `wiki-query` | `skills/wiki-query.md` | Answer a question grounded in the wiki, with citations |
@@ -74,15 +72,13 @@ The authoritative rules for the wiki itself live in **`wiki/AGENTS.md`**; the
 - **Tag by world.** Every wiki page carries a `world:` matching one of
   `profile.md`'s worlds. Never let a `confidential` world leak into another.
 - **Anchored flat files.** Project pages carry HTML comment anchors
-  (`<!-- now:start -->`, `<!-- todos:top -->`, `<!-- activity:top -->`,
-  `<!-- prime:stop -->`). Skills edit *between* anchors with exact-string edits —
-  keep the anchors intact.
-- **Sole writer.** Only `/todo` writes todo state. Other skills call it.
+  (`<!-- now:start -->`, `<!-- activity:top -->`, `<!-- prime:stop -->`). Skills
+  edit *between* anchors with exact-string edits — keep the anchors intact.
 - **Capture before process.** `/note` saves raw before anything ingests it.
 - **Propose before destroying.** `/wiki-maintain` lists changes and gets an OK
   before merges/prunes; it archives, never hard-deletes.
 - **Reading order = resume order.** A project page reads top-to-bottom the way you'd
-  resume the work: identity → now → todos → links → key files → recent activity.
+  resume the work: identity → now → links → key files → recent activity.
 - **Smart defaults.** When a skill needs input, propose a sensible default and let
   the user accept with one keystroke; never force a long questionnaire.
 - **Ask in chat, not a picker.** Any question a skill needs to ask goes in plain

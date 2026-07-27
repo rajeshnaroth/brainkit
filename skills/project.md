@@ -18,11 +18,11 @@ asking, and that focus lasts only the session.
    case-insensitive, prefix OK). Ambiguous → list candidates and ask. None → offer
    `project add`.
 2. Read the project page's **priming zone** — everything above `<!-- prime:stop -->`
-   (identity, Now, Todos, Links, Key files, recent activity). One cheap read resumes
+   (identity, Now, Links, Key files, recent activity). One cheap read resumes
    the work; that is what the ≤~150-line priming zone is for.
 3. Open the page's Key files.
-4. Print a compact reference card: name + one-liner, Now (state/blocker/next), open
-   todos, links, key files. Then hold this project's context for the session.
+4. Print a compact reference card: name + one-liner, Now (state/blocker/next),
+   links, key files. Then hold this project's context for the session.
 5. _Optional (if your agent exposes a session store):_ warn if another live session
    is focused on the same project, to avoid conflicting edits.
 
@@ -36,14 +36,12 @@ From a one-line description, derive everything and register the project with min
 questions. Always offer smart defaults the user accepts with one keystroke.
 1. Take (or ask for) a brief description.
 2. Derive and propose: `name`, 1–2 `aliases`, a one-liner, `world` (from
-   `profile.md`'s worlds — ask only if there are several and it's unclear), `status`
-   (default: active), and 2–4 starter todos. Let the user tweak.
+   `profile.md`'s worlds — ask only if there are several and it's unclear), and
+   `status` (default: active). Let the user tweak.
 3. Copy `projects/_template.html` → `projects/<name>.html`; fill the tokens; delete
    sections that don't apply (Run + repo/branch for non-code work).
 4. Register a new `<li>` in `projects/index.html` (next id, name, aliases, one-liner).
-5. If starter todos were accepted, hand them to `/todo` — it is the sole writer of
-   todo state. Do not write todos into the page yourself.
-6. Confirm, and offer to focus the new project.
+5. Confirm, and offer to focus the new project.
 
 ## Notes
 - The HTML page IS the project's definition and single source of truth. Never keep a

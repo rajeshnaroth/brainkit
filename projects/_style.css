@@ -130,19 +130,6 @@ h2.sec {
 .foot { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--line);
   color: var(--faint); font-size: 12px; }
 
-/* todos */
-.tcount { color: var(--faint); font-weight: 400; font-size: 12px; margin-left: 6px;
-  text-transform: none; letter-spacing: 0; }
-.todos { list-style: none; margin: 0; padding: 0; }
-.todos li { font-size: 13.5px; margin: 0 0 8px; line-height: 1.5; }
-.todos li:last-child { margin-bottom: 0; }
-.pri { display: inline-block; font-size: 10.5px; font-weight: 700; border-radius: 4px;
-  padding: 1px 6px; margin-right: 8px; vertical-align: 1px; }
-.pri.p1 { background: var(--p1bg); color: var(--p1ink); }
-.pri.p2 { background: var(--p2bg); color: var(--p2ink); }
-.pri.p3 { background: var(--code-bg); color: var(--muted); }
-.tmeta { color: var(--muted); font-size: 12px; }
-
 /* index page */
 .plist { list-style: none; margin: 0; padding: 0; }
 .plist li { border-top: 1px solid var(--line); padding: 12px 2px; display: flex;

@@ -12,10 +12,10 @@ skill; every other skill writes content into the structures it defines.
 
 ## Invariants — do not break (the other skills depend on them)
 - **Anchored, flat, no JS.** Keep the exact comment anchors (`now:start/end`,
-  `todos:top/end`, `activity:top`, `prime:stop`, `links:end`) so `/close-up` and
-  `/todo` can make exact-string edits. Pages open over `file://`.
+  `activity:top`, `prime:stop`, `links:end`) so `/close-up` can make exact-string
+  edits. Pages open over `file://`.
 - **`prime:stop` within ~150 lines** so `/project`'s priming read is cheap.
-- **Reading order = resume order** (identity → now → todos → links → key files →
+- **Reading order = resume order** (identity → now → links → key files →
   recent activity).
 
 ## Usage

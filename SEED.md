@@ -28,11 +28,12 @@ then a warm welcome. Do it in a few seconds, not a few minutes.
   set up later (see `AGENTS.md` → Backup); don't assume it at install. `AGENTS.md` is
   the durable constitution and stays.
 
-> **First-run heads-up (mention this to the user up front):** a freshly cloned repo
-> isn't trusted yet, so the agent's own `.claude/settings.json` isn't active for this
-> first session — the tool will ask to approve the one setup command (the deletion
-> above). Approve it once; from the next session on, the shipped settings keep routine
-> work quiet automatically.
+> **First-run heads-up (mention this to the user up front):** if the user started in
+> **auto / bypass-permissions mode**, setup runs with no prompts at all — just do it.
+> Otherwise a freshly cloned repo isn't trusted yet, so the agent's own
+> `.claude/settings.json` isn't active this first session and the tool will ask to
+> approve the one setup command (the deletion above). Have them approve it once; from
+> the next session on, the shipped settings keep routine work quiet automatically.
 
 ## 3. Welcome — print this to the user (in plain chat)
 Show them exactly this, then stop and let them drive:

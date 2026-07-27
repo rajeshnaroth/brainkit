@@ -9,26 +9,32 @@ this seed.
 
 You need an agent CLI (**Claude Code** or **GitHub Copilot CLI**) and **git**.
 
-Clone the seed in one shot, then step in:
+**The easy way — let the agent do it.** Make an empty folder for your brain, `cd` into
+it, and start your agent. Turn on **auto / bypass-permissions mode** (in Claude Code,
+press `shift+tab` until it shows *bypass permissions*), then type:
+
+> **setup my second brain from https://github.com/rajeshnaroth/brainkit**
+
+The agent clones the seed, sets up your two worlds — **work** and **personal** —
+prints a short welcome, and cleans up after itself. Auto-mode means it won't stop to
+ask permission at each step.
+
+**Prefer to drive git yourself?** Clone first, then start your agent in the folder:
 
 ```sh
 git clone https://github.com/rajeshnaroth/brainkit.git my-second-brain
 cd my-second-brain
 ```
 
-Now launch your agent in that folder and say:
+and tell it: **set up my second brain** (follow `SEED.md`).
 
-> **Set up my second brain** (follow `SEED.md`)
+Either way it detaches the seed from brainkit, prints a short welcome, and deletes the
+setup instructions. No interview, no config to hand-edit, and no git repo assumed — the
+brain is just a local folder. Back it up to a private git repo later, whenever you like.
 
-It detaches the seed from brainkit, sets up your two worlds — **work** and
-**personal** — prints a short welcome, and deletes the seed instructions. No
-interview, no config to hand-edit, and no git repo assumed — the brain is just a local
-folder. Back it up to a private git repo later, whenever you like.
-
-> **First run only:** your agent doesn't trust a freshly cloned folder yet, so it will
-> ask to approve setup's handful of edits. Pick **"allow all edits during this
-> session"** once (Claude Code: option 2 / shift+tab) and it finishes quietly. The
-> shipped `.claude/settings.json` keeps later sessions quiet on its own.
+> **If you're not in auto-mode:** a freshly cloned folder isn't trusted yet, so the
+> agent will ask to approve the one setup command (a single deletion). Approve it once;
+> the shipped `.claude/settings.json` keeps later sessions quiet on its own.
 
 > Clone it — don't ask the agent to "fetch" the repo. A single clone pulls the whole
 > tree at once; fetching file-by-file is slow and triggers an approval per file.

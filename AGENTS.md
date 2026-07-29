@@ -27,9 +27,10 @@ Two superpowers, in tension by design:
   `personal/` one, and a work query never reads `personal/`. Add a third walled world
   later (e.g. `confidential/`) by adding a sibling folder.
 - **Project** — an active area of focus. Projects live in `work/` only (each is a
-  page under `projects/`, an HTML file that is its single source of truth, plus
-  links). Personal is a privacy wall for knowledge, not a project space — if you want
-  personal *projects*, start a separate brain.
+  page under `projects/`, an HTML file that is its single source of truth, plus a
+  `projects/_activity/<name>.html` full activity log the project page links to). Personal
+  is a privacy wall for knowledge, not a project space — if you want personal
+  *projects*, start a separate brain.
 - **Facet** — an orthogonal topical tag on a wiki page (`hiring`, `pricing`,
   `kubernetes`, …). Facets are **derived** by the agent from your content, never
   enumerated by you.

@@ -38,7 +38,9 @@ questions. Always offer smart defaults the user accepts with one keystroke.
 2. Derive and propose: `name`, 1–2 `aliases`, a one-liner, and `status`
    (default: active). Let the user tweak.
 3. Copy `projects/_template.html` → `projects/<name>.html`; fill the tokens; delete
-   sections that don't apply (Run + repo/branch for non-code work).
+   sections that don't apply (Run + repo/branch for non-code work). Also copy
+   `projects/_template-activity.html` → `projects/_activity/<name>.html` and fill its
+   `{{NAME}}` tokens, so the project's "Full activity log" link resolves from day one.
 4. Register a new `<li>` in `projects/index.html` (next id, name, aliases, one-liner).
 5. Confirm, and offer to focus the new project.
 

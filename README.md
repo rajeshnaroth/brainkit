@@ -60,7 +60,7 @@ Open `projects/index.html` in a browser and bookmark it — that's your dashboar
 | `AGENTS.md` | The constitution every agent follows — model, skills, conventions. |
 | `profile.md` | Optional personalization — everything works without touching it. |
 | `wiki/` | Your knowledge base, split into two worlds: `work/` and `personal/` (each with `sources` · `entities` · `concepts` · `synthesis`), plus its SOP. |
-| `projects/` | HTML project pages (bookmarkable) + the portfolio index. |
+| `projects/` | HTML project pages (bookmarkable) + a per-project full activity log (`_activity/`) + the portfolio index. |
 | `skills/` | The SOPs the agent runs — canonical source; clone one to write your own. |
 | `.claude/` | `commands/` — thin stubs so Claude Code / Copilot CLI auto-discover the skills; `settings.json` — sane permissions so you're not flooded with approvals. |
 

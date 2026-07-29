@@ -16,11 +16,10 @@ durable knowledge into the wiki.
    - Prepend a new `<article class="act">` right after `<!-- activity:top -->`
      (newest first): Did · State · Next, dated today.
    - If more than ~5 entries sit above `<!-- prime:stop -->`, move the oldest into
-     `projects/_activity/<name>.html`. Create that file if it doesn't exist yet, and
-     the **first** time you create it, replace the `<!-- archive-link: … -->`
-     placeholder (just after `<!-- prime:stop -->`) with the real link
-     `<p class="archive-link">→ <a href="_activity/<name>.html">Full activity log</a></p>`
-     (so that the "Full activity log" link never points at a page that doesn't exist).
+     `projects/_activity/<name>.html` — prepend it at `<!-- archive:top -->` (newest
+     first) and drop that page's "No archived entries yet" placeholder once real
+     entries exist. The archive page already exists (created with the project) and the
+     project page already links it, so the "Full activity log" link always resolves.
    - Refresh the **Now** block between `<!-- now:start -->` / `<!-- now:end -->`
      (State · optional Blocker · Next).
    - Add any durable links before `<!-- links:end -->`.

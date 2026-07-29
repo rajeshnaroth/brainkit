@@ -16,11 +16,17 @@ durable knowledge into the wiki.
    - Prepend a new `<article class="act">` right after `<!-- activity:top -->`
      (newest first): Did · State · Next, dated today.
    - If more than ~5 entries sit above `<!-- prime:stop -->`, move the oldest into
-     `projects/_activity/<name>.html`.
+     `projects/_activity/<name>.html`. Create that file if it doesn't exist yet, and
+     the **first** time you create it, replace the `<!-- archive-link: … -->`
+     placeholder (just after `<!-- prime:stop -->`) with the real link
+     `<p class="archive-link">→ <a href="_activity/<name>.html">Full activity log</a></p>`
+     (so that the "Full activity log" link never points at a page that doesn't exist).
    - Refresh the **Now** block between `<!-- now:start -->` / `<!-- now:end -->`
      (State · optional Blocker · Next).
    - Add any durable links before `<!-- links:end -->`.
-4. **Ingest** the brief with `/wiki-ingest` (or note that raw is queued).
+4. **Ingest** — always finish by running `/wiki-ingest` on the brief (and anything
+   else queued in `wiki/raw/`) so the session's knowledge lands in the structured wiki.
+   Don't leave it merely queued.
 5. **Back up** (opt-in add-on) — the brain stays local by default. If the user has
    set up a git remote, commit and offer to push; otherwise stay local.
 

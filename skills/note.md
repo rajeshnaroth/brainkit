@@ -19,7 +19,9 @@ them here.
    Saving before anything else means a failed ingest never loses the note. If the
    note is personal, add a line to its body like `world: personal` so `/wiki-ingest`
    files it under `wiki/personal/`; otherwise it defaults to work.
-4. Offer to run `/wiki-ingest` on it now, or leave it queued in `wiki/raw/`.
+4. **Ingest** — always finish by running `/wiki-ingest` on the note so it's filed into
+   the wiki. The raw file is already saved (step 3), so a failed ingest never loses it;
+   don't just leave the note queued.
 
 ## Notes
 - If the note is clearly personal, flag it (see step 3) so it lands in the personal

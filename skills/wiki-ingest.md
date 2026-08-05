@@ -23,6 +23,12 @@ with it, that file wins.
    - Decide category(ies) — a file may yield several pages (source + entity +
      concept + …). Write or merge the page(s) under `wiki/<world>/<category>/` per
      `wiki/AGENTS.md`.
+   - **Verbatim artifacts** (`source: artifact` — email/chat threads, pasted docs,
+     logs, etc.): file each as a `sources/` page that **keeps the full text intact**
+     under a `## Full text` heading, with a short "what it is / why kept" lead above
+     it. Never summarize away or trim the verbatim — the whole point is exact
+     preservation. You may *additionally* derive entity/concept/synthesis pages from
+     it, but the source page retains the complete original.
    - Add cross-links **within that world only** (never link work↔personal). Update
      `wiki/index.md`.
    - Move the raw file to `wiki/raw/processed/` (never delete).

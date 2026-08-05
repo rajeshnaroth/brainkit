@@ -33,7 +33,7 @@ Inside each world, the same four categories apply — a page lives at
 
 | Category | Holds | Answers |
 |---|---|---|
-| `sources/` | Provenance — one page per source you read/heard (article, talk, chat, doc). What it is + key takeaways + a link. | "Where did I get this?" |
+| `sources/` | Provenance — one page per source you read/heard (article, talk, chat, doc). What it is + key takeaways + a link. For **artifacts** (emails, pasted docs, logs — things with no stable external link and whose exact wording matters), keep the **full verbatim text** in the page under a `## Full text` heading, not just takeaways. | "Where did I get this?" |
 | `entities/` | The nouns — people, teams, products, tools, orgs, projects. | "Who/what is X?" |
 | `concepts/` | Reusable ideas, patterns, how-tos — knowledge not tied to one source. | "How does X work? What's the pattern?" |
 | `synthesis/` | Your own conclusions, decisions, strategy, opinions. | "What do I think? What did we decide?" |
